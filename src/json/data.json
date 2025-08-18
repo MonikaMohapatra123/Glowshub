@@ -1,0 +1,203 @@
+{
+  "0": {
+    "logo": {
+      "bold": "fre",
+      "normal": "sha"
+    },
+    "buttons": [
+      {
+        "label": "Log in",
+        "route": "/login"
+      },
+      {
+        "label": "List your business",
+        "route": "/list-business"
+      }
+    ],
+    "menu": {
+      "label": "Menu",
+      "items": [
+        {
+          "label": "Log in or Sign in",
+          "route": "/login"
+        },
+        {
+          "label": "Help and Support",
+          "route": "/help"
+        },
+        {
+          "label": "English",
+          "route": "#"
+        }
+      ]
+    }
+  },
+  "1": {
+    "page": "Home",
+    "hero": {
+      "title": "Book local beauty and\nwellness services",
+      "treatments": [
+        "All treatments and venues",
+        "Haircut",
+        "Massage",
+        "Spa"
+      ],
+      "defaultLocation": "Current location",
+      "searchButton": "Search",
+      "appointmentText": "appointments booked today",
+      "startCount": 458078
+    },
+    "recommended": [
+      {
+        "img": "/salon-1.png",
+        "title": "HairFreeSG Electrolysis Permanent...",
+        "rating": "5.0",
+        "reviews": "(709)",
+        "location": "River Valley, Singapore",
+        "category": "Medspa"
+      },
+      {
+        "img": "/salon-2.png",
+        "title": "The Most Hair Design Ladies Salon",
+        "rating": "4.9",
+        "reviews": "(499)",
+        "location": "Dubai Design District, Dubai",
+        "category": "Hair Salon"
+      },
+      {
+        "img": "/salon-3.png",
+        "title": "Amber Gents Salon – Paramount",
+        "rating": "4.9",
+        "reviews": "(259)",
+        "location": "Paramount Hotel, Damac Towers",
+        "category": "Barber"
+      },
+      {
+        "img": "/salon-4.png",
+        "title": "KEMBALI Nails & Beauty Studio",
+        "rating": "4.8",
+        "reviews": "(39)",
+        "location": "Kerobokan, Kab. Badung",
+        "category": "Nails"
+      },
+      {
+        "img": "/salon-5.png",
+        "title": "Glow Skin & Hair Clinic",
+        "rating": "4.7",
+        "reviews": "(152)",
+        "location": "Jumeirah Beach, Dubai",
+        "category": "Skin Clinic"
+      },
+      {
+        "img": "/salon-6.png",
+        "title": "Royal Touch Spa & Wellness",
+        "rating": "4.9",
+        "reviews": "(287)",
+        "location": "Marina Bay, Singapore",
+        "category": "Spa"
+      }
+    ],
+    "trending": [
+      {
+        "img": "/trending-1.png",
+        "title": "Luxe Glow Beauty Bar",
+        "rating": "4.9",
+        "reviews": "(320)",
+        "location": "Central Park, New York",
+        "category": "Beauty Salon"
+      },
+      {
+        "img": "/trending-2.png",
+        "title": "Elite Hair & Spa",
+        "rating": "5.0",
+        "reviews": "(210)",
+        "location": "Beverly Hills, Los Angeles",
+        "category": "Spa"
+      },
+      {
+        "img": "/trending-3.png",
+        "title": "The Gentlemen's Den",
+        "rating": "4.8",
+        "reviews": "(180)",
+        "location": "Kensington, London",
+        "category": "Barber"
+      },
+      {
+        "img": "/trending-4.png",
+        "title": "Serenity Wellness",
+        "rating": "4.7",
+        "reviews": "(95)",
+        "location": "Bondi Beach, Sydney",
+        "category": "Wellness"
+      },
+      {
+        "img": "/trending-5.png",
+        "title": "Glow & Go Skin Studio",
+        "rating": "4.9",
+        "reviews": "(140)",
+        "location": "Downtown, Singapore",
+        "category": "Skin Clinic"
+      }
+    ],
+     "detailsPage": {
+      "storeText": "Available on",
+      "apple": "",
+      "google": "G",
+      "title": "Download the Fresha app",
+      "subtext": "Book unforgettable beauty and wellness experiences with the Fresha mobile app",
+      "image": "/salon-download.png"
+    },
+    
+  "reviews": [
+    {
+      "stars": 5,
+      "title": "The best booking system",
+      "text": "Great experience, easy to book. Paying for treatments is so convenient — no cash or cards needed!",
+      "name": "Lucy",
+      "location": "London, UK",
+      "img": "/salon-1.png"
+    },
+    {
+      "stars": 5,
+      "title": "Easy to use & explore",
+      "text": "Fresha's reminders make life so much easier. I also found a few good barbershops that I didn’t know existed.",
+      "name": "Dan",
+      "location": "New York, USA",
+      "img": "/salon-2.png"
+    },
+    {
+      "stars": 5,
+      "title": "Great for finding barbers",
+      "text": "I've been using Fresha for two years and it's by far the best booking platform I've used. Highly recommend it!",
+      "name": "Dale",
+      "location": "Sydney, Australia",
+      "img": "/trending-1.png"
+    },
+    {
+      "stars": 5,
+      "title": "My go-to for self-care",
+      "text": "Fresha is my go-to app for massages and facials. I can easily find and book places near me — I love it!",
+      "name": "Cameron",
+      "location": "Edinburgh, UK",
+      "img": "/trending-2.png"
+    }
+  ]
+
+
+  },
+  
+  "2": {
+    "page": "Footer",
+    "logo": "fresha",
+    "appButton": "Get the app",
+    "appIcons": ["apple", "google"],
+    "about": ["Careers", "Help and support", "Blog", "Sitemap"],
+    "forBusiness": ["For partners", "Pricing", "Support", "Status"],
+    "legal": ["Privacy Policy", "Terms of service", "Terms of use"],
+    "social": ["Facebook", "Twitter", "Linkedin", "Instagram"],
+    "language": "English",
+    "copyright": "© 2025 Fresha.com SV Ltd"
+  }
+
+
+}

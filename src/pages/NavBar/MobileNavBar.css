@@ -1,0 +1,133 @@
+.MobileNavBarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1100;
+}
+
+.MobileNavBarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #46018a;
+}
+
+.MobileLogoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.MobileLogoImage {
+  width: 40px;
+  height: auto;
+}
+
+.MobileLogoCompany {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.MobileMenuIcon {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.MobileNavBarList {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  list-style: none;
+  padding: 20px 0;
+}
+
+.MobileNavBarList.show {
+  transform: translateX(0);
+}
+
+.MobileNavBarItem {
+  margin: 15px 0;
+  position: relative;
+}
+
+.MobileNavBarLink,
+.MobileNavBarLinkWithIcon {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  display: block;
+}
+
+.MobileNavBarLinkWithIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MobileMenuIcon-ChevronIcon {
+  transition: transform 0.3s ease;
+}
+
+.MobileMenuIcon-rotate-up {
+  transform: rotate(45deg);
+}
+
+.MobileSubMenuList {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.MobileSubMenuList.show {
+  max-height: 500px;
+}
+
+.MobileSubMenuItem {
+  margin: 5px 0;
+}
+
+.MobileSubMenuLink {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.MobileSubMenuLink:hover {
+  color: #46018a;
+}
+
+.MobileNavBarActions {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.MobileNavBarButton {
+  background-color: #46018a;
+  color: white;
+  border: none;
+  border-radius: 20px 0 20px 0;
+  padding: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+.MobileNavBarButton:hover {
+  background-color: white;
+  color: #46018a;
+}

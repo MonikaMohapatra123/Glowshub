@@ -1,0 +1,133 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff; /* default light background */
+  transition: background 0.4s ease;
+}
+
+/* Dark mode background only */
+body.dark-mode {
+  background: #121212; /* dark background */
+}
+
+/* Navbar container */
+.navbar {
+  position: fixed; /* Sticks to top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background: linear-gradient(to right, #ffffff, #adbfee, #ecbbf1);
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+/* When scrolled */
+.navbar.scrolled {
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styling */
+.logo {
+  font-size: 22px;
+}
+
+.logo .bold {
+  font-weight: bold;
+}
+
+.logo .normal {
+  font-weight: normal;
+}
+
+/* Buttons container */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Buttons */
+.nav-btn {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.nav-btn:hover {
+  background: #f7f7f7;
+}
+
+/* Dark/Light toggle button style */
+.theme-toggle {
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Hamburger icon */
+.hamburger {
+  font-size: 16px;
+}
+
+/* Popup container */
+.menu-wrapper {
+  position: relative;
+}
+
+/* Popup styling */
+.menu-popup {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  min-width: 120px;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.menu-popup p {
+  padding: 6px;
+  margin: 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.menu-popup p:hover {
+  background: #ffe4ec;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .nav-buttons button:not(.menu-icon) {
+    display: none;
+  }
+}

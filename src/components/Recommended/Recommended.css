@@ -1,0 +1,108 @@
+.recommended-container {
+  position: relative;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* Horizontal scroll */
+.card-wrapper {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.card-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 316px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-content h3 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.rating {
+  font-size: 14px;
+  color: black;
+}
+
+.rating span {
+  color: gray;
+}
+
+.location {
+  font-size: 13px;
+  color: gray;
+  margin-bottom: 8px;
+}
+
+.category {
+  font-size: 12px;
+  padding: 3px 8px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+/* Arrows */
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.arrow-btn:hover {
+  background: #f5f5f5;
+}
+
+.arrow-btn.right {
+  right: 0;
+}
+
+.arrow-btn.left {
+  left: 0;
+}
+
+/* Mobile view: Show only one card at a time */
+@media (max-width: 600px) {
+  .card {
+    width: 100%; /* Full width of container */
+  }
+
+  .card-wrapper {
+    gap: 10px; /* Smaller gap for mobile */
+  }
+}

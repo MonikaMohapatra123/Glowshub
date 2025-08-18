@@ -1,0 +1,110 @@
+.professional-auth-container {
+  display: flex;
+  height: 100vh;
+  margin-top: 15px;
+}
+
+.auth-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.auth-left h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.auth-left p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.auth-left form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.auth-left form button {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.or-divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  height: 1px;
+  width: 40%;
+  background: #ccc;
+  position: absolute;
+  top: 50%;
+}
+
+.or-divider::before {
+  left: 0;
+}
+
+.or-divider::after {
+  right: 0;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: white;
+  cursor: pointer;
+}
+
+.social-btn.fb {
+  color: #1877f2;
+}
+
+.social-btn.google {
+  color: black;
+}
+
+.social-btn.apple {
+  color: black;
+}
+
+.customer-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.customer-link a {
+  color: blue;
+}
+
+.auth-right {
+  flex: 1;
+}
+
+.auth-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

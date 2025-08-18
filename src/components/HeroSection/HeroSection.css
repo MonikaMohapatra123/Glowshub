@@ -1,0 +1,74 @@
+.hero-container {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #ffffff, #adbfee, #ecbbf1);
+  min-height: 100vh;
+  margin-top: 50px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #000;
+  line-height: 1.2;
+  margin-top:100px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: white;
+  padding: 12px;
+  border-radius: 50px;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  border: 6px solid rgb(247, 206, 213);
+}
+
+.search-bar select,
+.search-bar input,
+.location-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  background: #f7f7f7;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search-btn {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background: #333;
+}
+
+.appointment-count {
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 32px;
+  }
+  .search-bar {
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 20px;
+  }
+}

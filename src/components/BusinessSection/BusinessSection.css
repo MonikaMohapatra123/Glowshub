@@ -1,0 +1,111 @@
+.business-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 80px;
+  background: linear-gradient(90deg, #f0ffdc 0%, #ffffff 100%);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Left Section */
+.business-left {
+  max-width: 450px;
+}
+
+.business-left h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.business-left p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background: #000;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #333;
+}
+
+.review-section {
+  font-size: 14px;
+  color: #333;
+}
+
+.review-section .stars {
+  font-size: 18px;
+  color: #000;
+  margin: 5px 0;
+}
+
+.review-section span {
+  font-weight: bold;
+}
+
+/* Right Section */
+.business-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-mockup img {
+  width: 550px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-mockup {
+  position: absolute;
+  bottom: -40px;
+  left: -50px;
+}
+
+.mobile-mockup img {
+  width: 220px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .business-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .business-right {
+    margin-top: 40px;
+  }
+
+  .calendar-mockup img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .mobile-mockup {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .mobile-mockup img {
+    width: 180px;
+  }
+}

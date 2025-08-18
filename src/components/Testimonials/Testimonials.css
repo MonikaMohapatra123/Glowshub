@@ -1,0 +1,115 @@
+.testimonials-container {
+  position: relative;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Horizontal scroll wrapper */
+.card-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.card-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card styles */
+.card {
+  flex: 0 0 auto;
+  width: 320px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Stars row */
+.stars {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 12px;
+}
+
+/* Title */
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Review text */
+.review-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* User info row */
+.user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.user img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.location {
+  font-size: 13px;
+  color: gray;
+}
+
+/* Arrows */
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.arrow-btn:hover {
+  background: #f5f5f5;
+}
+
+.arrow-btn.right {
+  right: 0;
+}
+
+.arrow-btn.left {
+  left: 0;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .card {
+    width: 85%;
+  }
+
+  .card-wrapper {
+    gap: 12px;
+  }
+}

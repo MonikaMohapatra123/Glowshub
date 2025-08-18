@@ -1,0 +1,153 @@
+.auth-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  
+}
+
+/* Left panel */
+.auth-left {
+  flex: 1;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  margin-right:100%;
+  margin-top: 20px;
+}
+
+.auth-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+/* Social buttons */
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.fb {
+  color: #1877f2;
+  border-color: #ddd;
+}
+
+.google {
+  color: #444;
+  border-color: #ddd;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  color: #999;
+  font-size: 12px;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.divider span {
+  margin: 0 10px;
+}
+
+/* Email input */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #000;
+}
+
+/* Continue button */
+.continue-btn {
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.continue-btn:hover {
+  background: #222;
+}
+
+/* Business link */
+.business-link {
+  font-size: 13px;
+  color: #555;
+}
+
+.business-link a {
+  color: #1877f2;
+  text-decoration: none;
+}
+
+.business-link a:hover {
+  text-decoration: underline;
+}
+
+/* Right panel */
+.auth-right {
+  flex: 1;
+  display: flex;
+}
+
+.auth-right img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+  }
+  .auth-right {
+    display: none;
+  }
+}
