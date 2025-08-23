@@ -69,7 +69,7 @@ function App() {
           <Route path="/recommend-click" element={<RecommendClick />} />
         </Routes>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }

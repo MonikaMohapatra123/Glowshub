@@ -1,56 +1,89 @@
 import React from "react";
-import footerData from "../../json/data.json";
-import "./Footer.css"; // Optional for styling
+import {
+  FaApple,
+  FaGooglePlay,
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaInstagram,
+} from "react-icons/fa";
+import "./Footer.css";
+import data from "../../json/data.json"; // adjust the path
 
-export default function Footer() {
-  const data = footerData["2"];
+const iconMap = {
+  apple: <FaApple />,
+  google: <FaGooglePlay />,
+  Facebook: <FaFacebook className="icon" />,
+  Twitter: <FaTwitter className="icon" />,
+  Linkedin: <FaLinkedin className="icon" />,
+  Instagram: <FaInstagram className="icon" />,
+};
+
+const Footer = () => {
+  const footerData = data["2"]; // accessing footer JSON
 
   return (
     <footer className="footer">
       <div className="footer-top">
+        {/* Logo + App Button */}
         <div className="footer-logo">
-          <h2>{data.logo}</h2>
-          <button>
-            {data.appButton} {data.appIcons.includes("apple") && ""}{" "}
-            {data.appIcons.includes("google") && "G"}
+          <h1 className="logo">{footerData.logo}</h1>
+          <button className="app-button">
+            {footerData.appButton}{" "}
+            {footerData.appIcons.map((icon, idx) => (
+              <span key={idx}>{iconMap[icon]}</span>
+            ))}
           </button>
         </div>
 
-        <div className="footer-links">
-          <div>
-            <h4>About Fresha</h4>
-            {data.about.map((item, i) => (
-              <p key={i}>{item}</p>
+        {/* About Fresha */}
+        <div>
+          <h3 className="footer-heading">About {footerData.logo}</h3>
+          <ul>
+            {footerData.about.map((item, idx) => (
+              <li key={idx}>{item}</li>
             ))}
-          </div>
+          </ul>
+        </div>
 
-          <div>
-            <h4>For business</h4>
-            {data.forBusiness.map((item, i) => (
-              <p key={i}>{item}</p>
+        {/* For Business */}
+        <div>
+          <h3 className="footer-heading">For business</h3>
+          <ul>
+            {footerData.forBusiness.map((item, idx) => (
+              <li key={idx}>{item}</li>
             ))}
-          </div>
+          </ul>
+        </div>
 
-          <div>
-            <h4>Legal</h4>
-            {data.legal.map((item, i) => (
-              <p key={i}>{item}</p>
+        {/* Legal */}
+        <div>
+          <h3 className="footer-heading">Legal</h3>
+          <ul>
+            {footerData.legal.map((item, idx) => (
+              <li key={idx}>{item}</li>
             ))}
-          </div>
+          </ul>
+        </div>
 
-          <div>
-            <h4>Find us on social</h4>
-            {data.social.map((item, i) => (
-              <p key={i}>{item}</p>
+        {/* Social */}
+        <div>
+          <h3 className="footer-heading">Find us on social</h3>
+          <ul>
+            {footerData.social.map((platform, idx) => (
+              <li key={idx}>{iconMap[platform]} {platform}</li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
 
+      {/* Bottom Bar */}
       <div className="footer-bottom">
-        <span>{data.language}</span>
-        <span>{data.copyright}</span>
+        <p className="language">🌐 {footerData.language}</p>
+        <p>{footerData.copyright}</p>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
