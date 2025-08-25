@@ -96,13 +96,36 @@ h2 {
   left: 0;
 }
 
-/* Mobile view: Show only one card at a time */
+
+/* ✅ Mobile view: Show only one card + arrows inside */
 @media (max-width: 600px) {
-  .card {
-    width: 100%; /* Full width of container */
+  .card-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0; /* remove gap to avoid half card */
   }
 
-  .card-wrapper {
-    gap: 10px; /* Smaller gap for mobile */
+  .card {
+    flex: 0 0 100% !important;  /* force full width */
+    width: 100% !important;
+    scroll-snap-align: start;
+  }
+
+  /* ✅ Move arrows inside for mobile */
+  .arrow-btn {
+    top: 45%; /* keep vertically centered */
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9); /* slight transparent for mobile */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .arrow-btn.left {
+    left: 10px;  /* move slightly inside */
+  }
+
+  .arrow-btn.right {
+    right: 10px; /* move slightly inside */
   }
 }

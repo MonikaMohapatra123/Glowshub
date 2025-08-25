@@ -20,7 +20,7 @@ const iconMap = {
 };
 
 const Footer = () => {
-  const footerData = data["2"]; // accessing footer JSON
+  const footerData = data["2"]; 
 
   return (
     <footer className="footer">
