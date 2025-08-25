@@ -10,6 +10,7 @@ import {
 import "./Footer.css";
 import data from "../../json/data.json"; // adjust the path
 
+
 const iconMap = {
   apple: <FaApple />,
   google: <FaGooglePlay />,
@@ -82,6 +83,7 @@ const Footer = () => {
         <p className="language">🌐 {footerData.language}</p>
         <p>{footerData.copyright}</p>
       </div>
+    
     </footer>
   );
 };
