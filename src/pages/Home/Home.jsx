@@ -49,9 +49,8 @@ import DetailsPage from '../../components/DetailsPage/DetailsPage';
 import Testimonials from '../../components/Testimonials/Testimonials';
 import StatsSection from '../../StatsSection/StatsSection';
 import BusinessSection from '../../components/BusinessSection/BusinessSection';
-import AnimatedCard from '../../components/AnimatedCard/AnimatedCard';
 import BookingModal from '../../components/BookingModal/BookingModal';
-// import ServicesSection from '../../components/ServicesSection/ServicesSection';
+
 
 const Home = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false); // ✅ modal state
@@ -68,7 +67,6 @@ const Home = () => {
       <Recommended recommendedData={recommendedData} />
       <Trending data={trendingData} />
       <Testimonials data={testimonialsData} />
-      {/* <ServicesSection/> */}
       <DetailsPage detailsData={detailsData} />
       <StatsSection/>
       <BusinessSection/>
@@ -88,7 +86,7 @@ const Home = () => {
         isOpen={isBookingOpen} 
         onClose={() => setIsBookingOpen(false)} 
       />
-      {/* <AnimatedCard/> */}
+     
     </div>
   );
 };
