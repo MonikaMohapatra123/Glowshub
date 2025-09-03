@@ -1,0 +1,519 @@
+/* Add your styles for DynamicEditForm here */
+/* Container for the form */
+.dynamic-form {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color:var(--background-color);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5rem;
+}
+
+/* Form title */
+.dynamic-form h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 50px;
+}
+
+.Form-GroupHeader {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #000;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 20px;
+  font-size: 16px;
+  border: 2px solid var(--background-color);
+  transition: border-color 0.2s ease-in-out;
+  background-color: var(--background-color);
+}
+
+/* Field focus style */
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="number"]:focus {
+  outline: none;
+  border: 2px solid #000;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the select element */
+.Editcustom-select {
+width: 100%;
+padding: 20px 14px;
+font-size: 16px;
+background-color:var(--background-color);
+border: 1px solid var(--background-color);
+appearance: none; /* Remove the default browser-specific arrow */
+cursor: pointer;
+transition: border-color 0.3s ease, background-color 0.3s ease;
+position: relative; /* Needed for positioning the arrow */
+}
+/* Style the dropdown arrow */
+.Editcustom-select::after {
+content: '\25BC'; /* Unicode character for the downward triangle */
+font-size: 16px;
+position: absolute;
+right: 10px; /* Position the arrow to the right */
+top: 50%;
+transform: translateY(-50%);
+pointer-events: none; /* Prevents the arrow from interfering with clicks */
+}
+
+/* Add focus styles */
+.Editcustom-select:focus {
+  border-color: #007bff;
+  background-color:var(--background-color);
+  outline: none;
+}
+
+/* Style the dropdown arrow */
+.Editcustom-select::-ms-expand {
+  display: none; /* Hides the dropdown arrow in IE */
+}
+
+/* Style the option text */
+.Editcustom-select option {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.Dynamicform-UploadCurrent{
+  margin: 2rem;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+/* Style the file input element */
+.DynamicForm-FileUpload {
+width: 100%; /* Make the file input full-width */
+padding: 2rem 15px;
+font-size: 16px;
+background-color: var(--background-color);
+border-radius: 5px;
+cursor: pointer;
+display: block;
+transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Style the file input when focused */
+.DynamicForm-FileUpload:focus {
+border-color: #007bff; /* Change border color on focus */
+background-color: var(--background-color); /* Light blue background */
+outline: none; /* Remove the default outline */
+}
+
+/* Style for file input with text */
+.DynamicForm-FileUpload::file-selector-button {
+background-color: #007bff; /* Blue button background */
+color: var(--background-color); /* Var(--background-color) text color */
+border: none;
+padding: 8px 12px;
+font-size: 16px;
+cursor: pointer;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+}
+
+/* Style for file input button hover */
+.DynamicForm-FileUpload::file-selector-button:hover {
+background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style for selected file text */
+.DynamicForm-FileUpload::after {
+content: attr(data-file-name);
+display: block;
+font-size: 14px;
+margin-top: 8px;
+color: #333;
+}
+
+
+/* Style for the uploaded image preview */
+.Dynamicform-ImageUpload {
+margin-top: 15px;
+width: 200px; /* Ensure the image does not stretch beyond 100px width */
+height: 200px; /* Ensure the image does not stretch beyond 100px height */
+object-fit: cover; /* Maintain aspect ratio and fill the area */
+display: block; /* To make the image behave like a block element */
+margin-left: auto; /* Center horizontally */
+margin-right: auto; /* Center horizontally */
+transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+cursor: pointer; /* Cursor change to indicate clickable */
+}
+
+
+
+/* Modal styling */
+.Modal {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000; /* Make sure modal is on top */
+}
+
+/* Modal content (image container) */
+.ModalContent {
+position: relative;
+background-color: var(--background-color);
+padding: 20px;
+border-radius: 10px;
+max-width: 90%;
+max-height: 90%;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Full-screen image in the modal */
+.FullPageImage {
+max-width: 100%;
+max-height: 100%;
+object-fit: contain; /* Make sure the image is contained within the modal */
+}
+
+/* Close button styling */
+.CloseModal {
+position: absolute;
+top: 10px;
+right: 10px;
+color: #000;
+border: none;
+border-radius: 50%;
+padding: 10px;
+cursor: pointer;
+font-size: 16px;
+transition: transform 0.3s ease;
+}
+
+.CloseModal:hover {
+transform: scale(2);
+}
+
+
+/* Style for Remove Button */
+.DynamicForm-RemoveButton {
+background-color: #ff4c4c; /* Red background for remove button */
+color: var(--background-color); /* Var(--background-color) color for icon */
+border: none;
+padding: 10px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+transition: background-color 0.3s ease;
+}
+
+.DynamicForm-RemoveButton:hover {
+background-color: #e60000; /* Darker red on hover */
+}
+
+.DynamicForm-RemoveButton i {
+font-size: 30px;
+margin: 0 auto;
+}
+
+/* Style for Add Button */
+.DynamicForm-AddButton {
+background-color: #4CAF50; /* Green background for add button */
+color: var(--background-color); /* Var(--background-color) color for icon */
+border: none;
+padding: 10px 20px; /* Add padding for more space around the icon */
+cursor: pointer;
+font-size: 16px;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+transition: background-color 0.3s ease;
+margin: 2rem;
+}
+
+/* Centering the button within its parent container */
+.DynamicForm-AddButtonContainer {
+display: flex;
+justify-content: center; /* Center horizontally */
+align-items: center; /* Center vertically */
+width: 100%; /* Ensure the container takes the full width */
+height: auto; /* Make the container height the full viewport height */
+}
+
+/* Hover effect for the button */
+.DynamicForm-AddButton:hover {
+background-color: #45a049; /* Darker green on hover */
+}
+
+/* Style for the icon inside the Add Button */
+.DynamicForm-AddButton i {
+font-size: 35px; /* Increase the icon size */
+margin: 0 auto; /* Center the icon inside the button */
+}
+
+
+
+
+
+
+/* Array group styling */
+.array-item {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  position: relative;
+}
+
+/* Remove button positioning */
+.array-item .remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+
+/* Update Button Styles */
+.update-button {
+background-color: #4CAF50; /* Green background */
+color: var(--background-color); /* Var(--background-color) text */
+padding: 14px 20px; /* Padding */
+border: none; /* Remove borders */
+border-radius: 4px; /* Rounded corners */
+cursor: pointer; /* Change cursor to pointer */
+font-size: 16px; /* Set font size */
+transition: background-color 0.3s ease; /* Smooth transition for background color */
+position: fixed; /* Make the button fixed on the screen */
+top: 10rem; /* Distance from the top */
+left: 10rem; /* Distance from the left */
+z-index: 1000; /* Ensure the button stays on top of other elements */
+}
+
+/* Disabled button */
+.update-button:disabled {
+background-color: var(--background-color); /* Disabled button background */
+cursor: not-allowed; /* Disable the cursor when button is disabled */
+}
+
+/* Hover effect */
+.update-button:hover {
+background-color: #45a049; /* Darker green on hover */
+}
+
+
+
+
+
+/* Mobile Styles for DynamicEditForm */
+@media (max-width: 768px) {
+
+/* Container for the form */
+.dynamic-form {
+  max-width: 100%;
+  padding: 20px;
+  margin-top: 2rem;
+  box-shadow: none; /* Remove shadow for mobile */
+}
+
+/* Form title */
+.dynamic-form h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 30px;
+}
+
+.Form-GroupHeader {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.Editcustom-select {
+  padding: 15px;
+  font-size: 14px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="number"]:focus {
+  border: 2px solid #000;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Select element styling */
+.Editcustom-select {
+  font-size: 14px;
+  padding: 15px 12px;
+}
+
+.Editcustom-select::after {
+  font-size: 14px;
+}
+
+/* File upload input */
+.DynamicForm-FileUpload {
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* File upload text */
+.Dynamicform-UploadCurrent {
+  margin: 1rem;
+  font-size: 16px;
+}
+
+.DynamicForm-FileUpload::after {
+  font-size: 12px;
+}
+
+/* Image preview */
+.Dynamicform-ImageUpload {
+  width: 150px; /* Smaller preview size on mobile */
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Remove and Add Buttons */
+.DynamicForm-RemoveButton,
+.DynamicForm-AddButton {
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.DynamicForm-AddButtonContainer {
+  margin: 20px 0;
+}
+
+/* Modal styles for mobile */
+.Modal {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.ModalContent {
+  padding: 10px;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.FullPageImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Close button */
+.CloseModal {
+  font-size: 14px;
+  top: 5px;
+  right: 5px;
+  padding: 8px;
+}
+
+/* Update Button */
+.update-button {
+  position: relative;
+  top: auto;
+  left: auto;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 14px;
+  padding: 12px;
+}
+
+.update-button:disabled {
+  background-color:var(--background-color);
+  cursor: not-allowed;
+}
+}
+
+/* Additional mobile responsiveness for very small screens */
+@media (max-width: 480px) {
+
+/* Form group styling for smaller screens */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.Editcustom-select {
+  padding: 12px;
+  font-size: 14px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="number"]:focus {
+  padding: 10px;
+}
+
+.Form-GroupHeader {
+  font-size: 16px;
+}
+
+.Dynamicform-ImageUpload {
+  width: 120px; /* Even smaller image preview */
+  height: 120px;
+}
+
+.DynamicForm-RemoveButton,
+.DynamicForm-AddButton {
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+.DynamicForm-AddButton i,
+.DynamicForm-RemoveButton i {
+  font-size: 25px;
+}
+
+.DynamicForm-AddButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Modal content adjustments for mobile screens */
+.ModalContent {
+  padding: 5px;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.FullPageImage {
+  max-width: 100%;
+  max-height: 100%;
+}
+}

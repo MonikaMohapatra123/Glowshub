@@ -1,0 +1,105 @@
+/* Login.css – styles specific to the Login component only */
+
+.auth-login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-login-container {
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 360px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.auth-login-container h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.auth-form-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.auth-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Login.css - input and label styling only */
+
+.auth-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.auth-form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.auth-form-input:focus {
+  border-color: #4b6cb7;
+  box-shadow: 0 0 0 2px rgba(75, 108, 183, 0.2);
+  outline: none;
+}
+
+
+.auth-form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.auth-form-group input:focus {
+  border-color: #4b6cb7;
+  outline: none;
+}
+
+.auth-login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4b6cb7;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.auth-login-button:hover {
+  background-color: #3a54a1;
+}
+
+.auth-error {
+  color: #e74c3c;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}

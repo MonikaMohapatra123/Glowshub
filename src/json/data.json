@@ -7,7 +7,7 @@
     "buttons": [
       {
         "label": "Log in",
-        "route": "/login"
+        "route": "/signUp"
       },
       {
         "label": "List your business",

@@ -1,0 +1,134 @@
+.dynamic-form {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dynamic-form__title {
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.dynamic-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dynamic-form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.dynamic-form__label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.dynamic-form__input,
+.dynamic-form__select,
+.dynamic-form__file-input {
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.dynamic-form__input:focus,
+.dynamic-form__select:focus,
+.dynamic-form__file-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.dynamic-form__array-wrapper {
+  border-left: 3px solid #eee;
+  padding-left: 16px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dynamic-form__array-item {
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.dynamic-form__subfield-group {
+  margin-bottom: 12px;
+}
+
+.dynamic-form__subfield-label {
+  font-size: 14px;
+  margin-bottom: 4px;
+  display: block;
+  color: #555;
+}
+
+.dynamic-form__add-btn,
+.dynamic-form__remove-btn,
+.dynamic-form__submit-btn {
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.dynamic-form__remove-btn {
+  background-color: #dc3545;
+  margin-top: 12px;
+}
+
+.dynamic-form__add-btn {
+  background-color: #28a745;
+  align-self: flex-start;
+}
+
+.dynamic-form__submit-btn {
+  align-self: center;
+  margin-top: 20px;
+  min-width: 160px;
+}
+
+.dynamic-form__add-btn:hover {
+  background-color: #218838;
+}
+
+.dynamic-form__remove-btn:hover {
+  background-color: #c82333;
+}
+
+.dynamic-form__submit-btn:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 600px) {
+  .dynamic-form {
+    padding: 20px;
+  }
+
+  .dynamic-form__title {
+    font-size: 20px;
+  }
+
+  .dynamic-form__submit-btn {
+    width: 100%;
+  }
+}
